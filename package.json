@@ -9,7 +9,6 @@
   },
   "scripts": {
     "start": "./scripts/dev.sh",
-    "build": "./scripts/build.sh",
-    "test": "./scripts/test.sh"
+    "build": "./scripts/build.sh"
   }
 }
