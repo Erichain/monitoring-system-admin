@@ -12,6 +12,7 @@
     "path": "^0.12.7"
   },
   "dependencies": {
+    "chart.js": "^2.6.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },

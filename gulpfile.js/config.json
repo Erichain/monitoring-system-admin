@@ -1,1 +1,90 @@
-{}
+{
+  "env": "dev",
+  "entry": "./src/scripts/app.js",
+  "root": {
+    "src": "./src",
+    "dest": "./dist",
+    "assets": "/assets"
+  },
+
+  "tasks": {
+    "browserSync": {
+      "port": "2333",
+      "browser": "Google Chrome",
+      "server": {
+        "baseDir": "dist"
+      }
+    },
+
+    "static": {
+      "src": "static",
+      "dest": "./"
+    },
+
+    "scripts": {
+      "src": "scripts",
+      "dest": "scripts",
+      "entry": {
+        "app": ["./app.js"]
+      },
+      "extensions": ["json", "js"],
+      "babel": {
+        "presets": ["es2015", "es2016"],
+        "plugins": []
+      }
+    },
+
+    "styles": {
+      "src": "styles",
+      "dest": "styles",
+      "autoprefixer": {
+        "browsers": ["last 3 versions"]
+      },
+      "sass": {
+        "intentedSyntax": true,
+        "includePaths": []
+      },
+      "extensions": ["scss", "css"]
+    },
+
+    "html": {
+      "src": "./",
+      "dest": "./",
+      "dataFile": "global.json",
+      "htmlmin": {
+        "collapseWhitespace": true
+      },
+      "extensions": ["html", "json"],
+      "excludeFolders": ["layouts", "shared", "macros", "data"]
+    },
+
+    "images": {
+      "src": "images",
+      "dest": "images",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg", "otf"]
+    },
+
+    "iconFonts": {
+      "src": "icons",
+      "dest": "fonts",
+      "sassDest": "generated",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+
+    "svgSprite": {
+      "src": "icons",
+      "dest": "images",
+      "extensions": ["svg"]
+    },
+
+    "production" : {
+      "rev": true
+    }
+  }
+}

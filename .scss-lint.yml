@@ -1,0 +1,12 @@
+scss_files: 'src/styles/**/*.css.scss'
+
+exclude: 'node_modules/'
+
+linters:
+  BorderZero:
+    convention: none
+
+  LeadingZero:
+    style: include_zero
+
+  
