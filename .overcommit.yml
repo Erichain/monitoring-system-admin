@@ -36,6 +36,8 @@ verify_signatures: true
 PreCommit:
   ALL:
     quiet: false
+  AuthorName:
+    enabled: false
   TsLint:
     enabled: true
     include:
