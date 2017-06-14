@@ -1,3 +1,5 @@
-/**
- * Created by Erichain on 03/06/2017.
- */
+module.exports = {
+  autoprefixer: {
+    browsers: ['Safari > 1'],
+  },
+};
