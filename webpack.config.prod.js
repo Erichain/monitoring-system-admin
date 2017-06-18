@@ -24,7 +24,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['ts', 'tsx', 'js'],
+    extensions: ['.ts', '.tsx', '.js'],
     modules: ['node_modules'],
   },
 

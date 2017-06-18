@@ -12,19 +12,12 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: 'http://localhost:3333/',
-  },
-
-  devServer: {
-    hot: true,
-    inline: true,
-    port: 3333,
-    compress: false,
+    publicPath: `http://${process.env.LOCAL_IP}:3333/`,
   },
 
   resolve: {
     modules: ['node_modules'],
-    extensions: ['ts', 'tsx', 'js', 'css'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
 
   devtool: 'cheap-module-source-map',
@@ -58,10 +51,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'App',
+      template: 'src/index.html',
       chunks: ['app'],
     }),
     new OpenBrowserPlugin({
-      url: 'http://localhost:3333/',
+      url: `http://${process.env.LOCAL_IP}:3333/index.html`,
     }),
   ],
 };
