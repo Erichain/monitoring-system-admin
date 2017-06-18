@@ -36,6 +36,7 @@ coverage
 build/
 public/
 dist*
+dll/
 
 # misc
 .DS_Store

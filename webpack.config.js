@@ -1,17 +1,8 @@
 const webpack = require('webpack');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const manifest = require('./dll/vendor-manifest.json');
-const HappyPack = require('happypack');
-
-const happyPackPlugins = [
-  new HappyPack({
-    id: 'ts',
-    threads: 4,
-    loaders: ['ts-loader'],
-  }),
-];
 
 module.exports = {
   entry: {
@@ -19,21 +10,31 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, 'dist-[hash]'),
-    filename: '[name].[hash].js',
+    path: path.join(__dirname, 'dist'),
+    filename: '[name].js',
+    publicPath: 'http://localhost:3333/',
+  },
+
+  devServer: {
+    hot: true,
+    inline: true,
+    port: 3333,
+    compress: false,
   },
 
   resolve: {
-    extensions: ['ts', 'tsx', 'js'],
     modules: ['node_modules'],
+    extensions: ['ts', 'tsx', 'js', 'css'],
   },
+
+  devtool: 'cheap-module-source-map',
 
   module: {
     rules: [
       {
         test: /\.(tsx?|js)$/,
         exclude: /node_modules/,
-        use: 'happypack/loader?id=ts',
+        use: 'ts-loader',
       }, {
         test: /\.scss$/,
         exclude: /node_modules/,
@@ -59,9 +60,8 @@ module.exports = {
       title: 'App',
       chunks: ['app'],
     }),
-
-    new webpack.DllReferencePlugin({
-      manifest,
-    })
-  ].concat(happyPackPlugins),
+    new OpenBrowserPlugin({
+      url: 'http://localhost:3333/',
+    }),
+  ],
 };

@@ -1,7 +1,14 @@
 {
   "name": "monitoring-system-admin",
   "version": "0.1.0",
-  "private": true,
+  "author": "Erichain",
+  "description": "An admin system for front-end performance monitoring.",
+  "private": false,
+  "repository": "https://github.com/Erichain/monitoring-system-admin",
+  "scripts": {
+    "start": "./scripts/dev.sh",
+    "build": "./scripts/build.sh"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.25.0",
@@ -16,6 +23,7 @@
     "extract-text-webpack-plugin": "^2.1.2",
     "happypack": "^4.0.0-beta.1",
     "html-webpack-plugin": "^2.28.0",
+    "open-browser-webpack-plugin": "^0.0.5",
     "path": "^0.12.7",
     "scss-loader": "^0.0.1",
     "style-loader": "^0.18.2",
@@ -23,7 +31,8 @@
     "tslint": "^5.4.3",
     "typescript": "^2.3.4",
     "url-loader": "^0.5.9",
-    "webpack": "^2.6.1"
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
     "d3": "^4.9.1",
@@ -35,8 +44,8 @@
     "redux": "^3.6.0",
     "redux-action": "^1.2.2"
   },
-  "scripts": {
-    "start": "./scripts/dev.sh",
-    "build": "./scripts/build.sh"
+  "engines": {
+    "npm": ">=4.0",
+    "node": ">=7.0"
   }
 }
