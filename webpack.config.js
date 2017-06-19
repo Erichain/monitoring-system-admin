@@ -49,10 +49,15 @@ module.exports = {
   },
 
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'common',
+      filename: 'common.js',
+    }),
     new HtmlWebpackPlugin({
       title: 'App',
       template: 'src/index.html',
-      chunks: ['app'],
+      inject: 'body',
+      chunks: ['common', 'app'],
     }),
     new OpenBrowserPlugin({
       url: `http://${process.env.LOCAL_IP}:3333/index.html`,

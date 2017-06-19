@@ -3,15 +3,8 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const manifest = require('./dll/vendor-manifest.json');
-const HappyPack = require('happypack');
-
-const happyPackPlugins = [
-  new HappyPack({
-    id: 'ts',
-    threads: 4,
-    loaders: ['ts-loader'],
-  }),
-];
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -33,7 +26,7 @@ module.exports = {
       {
         test: /\.(tsx?|js)$/,
         exclude: /node_modules/,
-        use: 'happypack/loader?id=ts',
+        use: ['ts-loader'],
       }, {
         test: /\.scss$/,
         exclude: /node_modules/,
@@ -57,11 +50,20 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'App',
+      template: 'src/index.html',
       chunks: ['app'],
     }),
-
     new webpack.DllReferencePlugin({
       manifest,
-    })
-  ].concat(happyPackPlugins),
+    }),
+    new CopyWebpackPlugin([{
+      from: 'dist-dll/vendor.dll.js',
+      to: '.',
+    }]),
+    new HtmlWebpackIncludeAssetsPlugin({
+      files: ['index.html'],
+      assets: ['vendor.dll.js'],
+      append: false,
+    }),
+  ],
 };
