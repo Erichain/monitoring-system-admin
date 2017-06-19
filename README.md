@@ -21,6 +21,12 @@ npm run start
 npm run build
 ```
 
+### Test
+
+``` bash
+npm run test
+```
+
 ## License
 
 Released under the MIT license.
