@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: path.join(__dirname, 'src', 'app.tsx'),
+    app: path.join(__dirname, 'src', 'App.tsx'),
   },
 
   output: {

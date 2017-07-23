@@ -38,6 +38,8 @@ PreCommit:
     quiet: false
   AuthorName:
     enabled: false
+  CaseConflicts:
+    enabled: false
   TsLint:
     enabled: true
     include:
