@@ -1,13 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Component } from 'react';
-import Banner from './components/Banner';
+import Header from './components/shared/Header';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <Banner />
+        <Header />
       </div>
     );
   }

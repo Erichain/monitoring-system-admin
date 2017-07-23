@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "chart.js": "registry:npm/chart.js#2.1.4+20160615174920",
     "d3": "registry:npm/d3#3.0.0+20160723033700",
     "react": "registry:npm/react#15.0.1+20170104200836",
     "react-dom": "registry:npm/react-dom#15.0.1+20160826174104"
