@@ -3,6 +3,8 @@ import { Component } from 'react';
 import CommonChart from './CommonChart';
 
 interface Props {
+  data: object;
+  options: object;
   width?: number;
 }
 
@@ -14,7 +16,11 @@ export default class BarChart extends Component<Props> {
   };
 
   render() {
-    const { width } = this.props;
+    const {
+      width,
+      data,
+      options,
+    } = this.props;
 
     return (
       <div
@@ -23,7 +29,10 @@ export default class BarChart extends Component<Props> {
           width: `${width}vw`,
         }}
       >
-        <CommonChart />
+        <CommonChart
+          data={data}
+          options={options}
+        />
       </div>
     );
   }

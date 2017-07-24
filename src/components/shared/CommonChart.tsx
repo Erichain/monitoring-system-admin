@@ -25,15 +25,17 @@ export default class CommonChart extends Component<Props, States> {
   }
 
   initializeLineChart() {
-    const chartElem = findDOMNode(this);
+    const chartCtx = findDOMNode(this);
     const {
       data,
       type,
+      options,
     } = this.props;
 
-    new Chart(chartElem, {
+    new Chart(chartCtx, {
       type,
       data,
+      options,
     });
   }
 
