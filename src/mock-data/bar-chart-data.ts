@@ -1,6 +1,6 @@
-const Mock = require('mockjs');
+import * as Mock from 'mockjs';
 
-Mock.mock('', {
+Mock.mock('/bar-data.json', {
   data: {
     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
     datasets: [{
