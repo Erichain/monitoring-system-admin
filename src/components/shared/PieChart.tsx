@@ -7,17 +7,11 @@ interface Props {}
 export default class BarChart extends Component<Props> {
   props: Props;
 
-  static defaultProps: Partial<Props> = {
-    width: 50,
-  };
-
   render() {
     return (
-      <div className="container-chart">
-        <CommonChart
-          type={'pie'}
-        />
-      </div>
+      <CommonChart
+        type={'pie'}
+      />
     );
   }
 }

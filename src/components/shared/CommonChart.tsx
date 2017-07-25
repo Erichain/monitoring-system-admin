@@ -6,6 +6,7 @@ import { findDOMNode } from 'react-dom';
 interface Props {
   data: object;
   options: object;
+  width?: number,
   type?: string;
 }
 
@@ -18,6 +19,7 @@ export default class CommonChart extends Component<Props, States> {
     data: {},
     type: 'bar',
     options: {},
+    width: 100,
   };
 
   componentDidMount() {
@@ -25,7 +27,7 @@ export default class CommonChart extends Component<Props, States> {
   }
 
   initializeLineChart() {
-    const chartCtx = findDOMNode(this);
+    const chartCtx = findDOMNode(this).querySelector('#chart-ctx');
     const {
       data,
       type,
@@ -40,8 +42,14 @@ export default class CommonChart extends Component<Props, States> {
   }
 
   render() {
+    const { width } = this.props;
+
     return (
-      <canvas />
+      <div className="chart-container" style={{
+        width: `${width}vw`,
+      }}>
+        <canvas id="chart-ctx" />
+      </div>
     );
   }
 }

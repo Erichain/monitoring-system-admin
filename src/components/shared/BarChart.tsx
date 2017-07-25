@@ -11,29 +11,17 @@ interface Props {
 export default class BarChart extends Component<Props> {
   props: Props;
 
-  static defaultProps: Partial<Props> = {
-    width: 50,
-  };
-
   render() {
     const {
-      width,
       data,
       options,
     } = this.props;
 
     return (
-      <div
-        className="container-chart"
-        style={{
-          width: `${width}vw`,
-        }}
-      >
-        <CommonChart
-          data={data}
-          options={options}
-        />
-      </div>
+      <CommonChart
+        data={data}
+        options={options}
+      />
     );
   }
 }

@@ -4,7 +4,6 @@ import CommonChart from './CommonChart';
 
 interface Props {
   width?: number;
-  height?: number;
 }
 
 export default class LineChart extends Component<Props> {
@@ -12,11 +11,9 @@ export default class LineChart extends Component<Props> {
 
   render() {
     return (
-      <div className="container-chart">
-        <CommonChart
-          type={'line'}
-        />
-      </div>
+      <CommonChart
+        type={'line'}
+      />
     );
   }
 }
