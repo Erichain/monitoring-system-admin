@@ -11,11 +11,25 @@ import {
   fetchBarData,
 } from './services/request-service/chart-data-services';
 
+interface Props {}
+
+interface State {
+  barData: {},
+}
+
 const options = {};
 
-class App extends Component {
-  componentWillMount() {
-    fetchBarData();
+class App extends Component<Props, object> {
+  constructor(props: Props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    fetchBarData().then(data => {
+      this.setState({
+      });
+      console.log(data)
+    });
   }
 
   render() {

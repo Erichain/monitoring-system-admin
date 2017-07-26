@@ -1,11 +1,8 @@
 import axios from 'axios';
 import requestConfig from '../request-config';
 
-export const fetchBarData: () => void = () => {
-  axios.get(requestConfig.barDataAPI)
-  .then(data => {
-    console.log(data)
-  })
+export const fetchBarData: any = () => {
+  return axios.get(requestConfig.barDataAPI)
   .catch(error => {
     console.error(error);
   });
