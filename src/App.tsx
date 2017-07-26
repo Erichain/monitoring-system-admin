@@ -7,13 +7,15 @@ import LineChart from './components/shared/LineChart';
 import PieChart from './components/shared/PieChart';
 import PolarAreaChart from './components/shared/PolarAreaChart';
 import RadarChart from './components/shared/RadarChart';
-import axios from 'axios';
+import {
+  fetchBarData,
+} from './services/request-service/chart-data-services';
 
 const options = {};
 
 class App extends Component {
   componentWillMount() {
-
+    fetchBarData();
   }
 
   render() {

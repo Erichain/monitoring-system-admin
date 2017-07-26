@@ -1,3 +1,3 @@
-const faker = require('faker');
+const Mock = require('mockjs');
 
 module.exports = {};
