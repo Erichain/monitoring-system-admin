@@ -7,3 +7,10 @@ export const fetchBarData: any = () => {
     console.error(error);
   });
 };
+
+export const fetchLineData: any = () => {
+  return axios.get(requestConfig.lineDataAPI)
+    .catch(error => {
+      console.error(error);
+    });
+};

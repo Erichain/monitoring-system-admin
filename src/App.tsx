@@ -11,15 +11,15 @@ import RadarChart from './components/shared/RadarChart';
 
 import {
   fetchBarData,
+  fetchLineData,
 } from './services/request-service/chart-data-services';
 
 interface Props {}
 
 interface State {
   barData: {},
+  lineData: {},
 }
-
-const options = {};
 
 class App extends Component<Props, State> {
   private state: Partial<State> = {};
@@ -36,21 +36,31 @@ class App extends Component<Props, State> {
         barData: data,
       });
     });
+
+    fetchLineData().then(({ data }) => {
+      this.setState({
+        lineData: data,
+      });
+    });
   }
 
   render() {
-    const { barData }: Partial<State> = this.state;
+    const {
+      barData,
+      lineData,
+    }: Partial<State> = this.state;
 
     return (
       <div>
         <Header />
         <h1>Bar Chart</h1>
         <BarChart
-          options={options}
           data={barData}
         />
         <h1>Line Chart</h1>
-        <LineChart />
+        <LineChart
+          data={lineData}
+        />
         <h1>Pie Chart</h1>
         <PieChart />
         <h1>Polar Area Chart</h1>

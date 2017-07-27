@@ -1,5 +1,6 @@
 const express = require('express');
 const barData = require('./bar-chart-data');
+const lineData = require('./line-chart-data');
 const app = express();
 
 const allowCrossDomain = (req, res, next) => {
@@ -18,6 +19,10 @@ app.get('/', () => {
 
 app.get('/data/bar', (req, res) => {
   res.send(JSON.stringify(barData));
+});
+
+app.get('/data/line', (req, res) => {
+  res.send(JSON.stringify(lineData));
 });
 
 app.listen(2333, function () {
