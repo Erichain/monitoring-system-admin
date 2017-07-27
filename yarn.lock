@@ -43,9 +43,13 @@
   version "20.0.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-20.0.1.tgz#8643a195d925a00f7bdee5257d12c3aac743f3b4"
 
-"@types/jquery@*", "@types/jquery@^3.2.9":
+"@types/jquery@*":
   version "3.2.9"
   resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.2.9.tgz#38e8b5d9eac75f6a0b15b839f7f6559fb0923bda"
+
+"@types/jquery@2.0.47":
+  version "2.0.47"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-2.0.47.tgz#9665a157519dd48d259f94ac670d332a56561c00"
 
 abab@^1.0.3:
   version "1.0.3"
