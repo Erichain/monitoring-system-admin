@@ -15,7 +15,7 @@ export default class BarChart extends Component<Props> {
     const {
       data,
       options,
-    } = this.props;
+    }: Props = this.props;
 
     return (
       <CommonChart

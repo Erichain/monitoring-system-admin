@@ -22,17 +22,17 @@ export default class CommonChart extends Component<Props, States> {
     width: 100,
   };
 
-  componentDidMount() {
-    this.initializeLineChart();
+  componentWillReceiveProps(nextProps: Props) {
+    this.initializeLineChart(nextProps);
   }
 
-  initializeLineChart() {
+  initializeLineChart(nextProps: Props) {
     const chartCtx = findDOMNode(this).querySelector('#chart-ctx');
     const {
       data,
       type,
       options,
-    } = this.props;
+    }: Props = nextProps;
 
     new Chart(chartCtx, {
       type,

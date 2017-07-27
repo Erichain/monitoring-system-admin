@@ -33,9 +33,19 @@
   dependencies:
     "@types/babel-types" "*"
 
+"@types/bootstrap@^3.3.35":
+  version "3.3.35"
+  resolved "https://registry.yarnpkg.com/@types/bootstrap/-/bootstrap-3.3.35.tgz#cfb98db36b5995824799ce6eb761dc48d808c096"
+  dependencies:
+    "@types/jquery" "*"
+
 "@types/jest@^20.0.1":
   version "20.0.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-20.0.1.tgz#8643a195d925a00f7bdee5257d12c3aac743f3b4"
+
+"@types/jquery@*", "@types/jquery@^3.2.9":
+  version "3.2.9"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.2.9.tgz#38e8b5d9eac75f6a0b15b839f7f6559fb0923bda"
 
 abab@^1.0.3:
   version "1.0.3"
