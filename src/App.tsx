@@ -21,6 +21,24 @@ interface State {
   lineData: {},
 }
 
+const options: object = {
+  legend: {
+    display: true,
+  },
+  title: {
+    display: true,
+    text: 'This is line chart',
+  },
+  layout: {
+    padding: {
+      top: 0,
+      right: 50,
+      bottom: 0,
+      left: 50,
+    }
+  }
+};
+
 class App extends Component<Props, State> {
   private state: Partial<State> = {};
 
@@ -56,10 +74,12 @@ class App extends Component<Props, State> {
         <h1>Bar Chart</h1>
         <BarChart
           data={barData}
+          options={options}
         />
         <h1>Line Chart</h1>
         <LineChart
           data={lineData}
+          options={options}
         />
         <h1>Pie Chart</h1>
         <PieChart />

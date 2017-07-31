@@ -1,32 +1,27 @@
 const Mock = require('mockjs');
 
 module.exports = Mock.mock({
-  labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+  labels: [10, 20, 30, 40, 50],
   datasets: [{
-    label: '# of Votes',
+    label: 'of XXXX',
     data: [{
-     x: 10,
-     y: 20,
+      x: 10,
+      y: 10,
+    }, {
+      x: 20,
+      y: 20,
     }, {
       x: 30,
-      y: 50,
+      y: 15,
+    }, {
+      x: 40,
+      y: 19,
+    }, {
+      x: 50,
+      y: 15,
     }],
-    backgroundColor: [
-      'rgba(255, 99, 132, 0.2)',
-      'rgba(54, 162, 235, 0.2)',
-      'rgba(255, 206, 86, 0.2)',
-      'rgba(75, 192, 192, 0.2)',
-      'rgba(153, 102, 255, 0.2)',
-      'rgba(255, 159, 64, 0.2)',
-    ],
-    borderColor: [
-      'rgba(255,99,132,1)',
-      'rgba(54, 162, 235, 1)',
-      'rgba(255, 206, 86, 1)',
-      'rgba(75, 192, 192, 1)',
-      'rgba(153, 102, 255, 1)',
-      'rgba(255, 159, 64, 1)',
-    ],
-    borderWidth: 1,
+    backgroundColor: 'rgba(100, 100, 0, 0.1)',
+    pointStyle: 'star',
+    pointBackgroundColor: 'rgba(255, 0, 0, 1)',
   }],
 });
