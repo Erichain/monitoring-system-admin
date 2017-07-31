@@ -14,3 +14,10 @@ export const fetchLineData: any = () => {
       console.error(error);
     });
 };
+
+export const fetchPolarAreaData: any = () => {
+  return axios.get(requestConfig.polarAreaDataAPI)
+    .catch(error => {
+      console.error(error);
+    });
+};

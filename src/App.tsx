@@ -12,6 +12,7 @@ import RadarChart from './components/shared/RadarChart';
 import {
   fetchBarData,
   fetchLineData,
+  fetchPolarAreaData,
 } from './services/request-service/chart-data-services';
 
 interface Props {}
@@ -19,6 +20,7 @@ interface Props {}
 interface State {
   barData: {},
   lineData: {},
+  polarAreaData: {},
 }
 
 const options: object = {
@@ -27,16 +29,8 @@ const options: object = {
   },
   title: {
     display: true,
-    text: 'This is line chart',
+    text: 'chart title',
   },
-  layout: {
-    padding: {
-      top: 0,
-      right: 50,
-      bottom: 0,
-      left: 50,
-    }
-  }
 };
 
 class App extends Component<Props, State> {
@@ -60,12 +54,19 @@ class App extends Component<Props, State> {
         lineData: data,
       });
     });
+
+    fetchPolarAreaData().then(({ data }) => {
+      this.setState({
+        polarAreaData: data,
+      });
+    });
   }
 
   render() {
     const {
       barData,
       lineData,
+      polarAreaData,
     }: Partial<State> = this.state;
 
     return (
@@ -84,7 +85,10 @@ class App extends Component<Props, State> {
         <h1>Pie Chart</h1>
         <PieChart />
         <h1>Polar Area Chart</h1>
-        <PolarAreaChart />
+        <PolarAreaChart
+          data={polarAreaData}
+          options={options}
+        />
         <h1>Radar Chart</h1>
         <RadarChart />
       </div>

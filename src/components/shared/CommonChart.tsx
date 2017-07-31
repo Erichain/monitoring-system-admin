@@ -19,7 +19,7 @@ export default class CommonChart extends Component<Props, States> {
     data: {},
     type: 'bar',
     options: {},
-    width: 100,
+    width: 60,
   };
 
   componentWillReceiveProps(nextProps: Props) {
