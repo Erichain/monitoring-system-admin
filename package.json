@@ -8,6 +8,7 @@
   "scripts": {
     "test": "jest --config=./jest.config.js",
     "start": "./scripts/dev.sh",
+    "server": "nodemon ./mock-data/index.js",
     "build": "./scripts/build.sh"
   },
   "devDependencies": {
