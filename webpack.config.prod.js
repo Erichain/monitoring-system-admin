@@ -17,8 +17,11 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
-    modules: ['node_modules'],
+    extensions: ['.ts', '.tsx', '.js', '.scss', '.css', '*'],
+    modules: [
+      'src',
+      'node_modules',
+    ],
   },
 
   module: {
@@ -30,10 +33,12 @@ module.exports = {
       }, {
         test: /\.scss$/,
         exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader',
-        }),
+        use: [
+          'style-loader',
+          'css-loader?importLoaders=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+          'postcss-loader',
+          'sass-loader',
+        ],
       }, {
         test: /\.(jpe?g|png|gif|svg)$/,
         exclude: /node_modules/,
@@ -64,6 +69,12 @@ module.exports = {
       files: ['index.html'],
       assets: ['vendor.dll.js'],
       append: false,
+    }),
+    new webpack.ProvidePlugin({
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery',
+      Tether: 'tether',
     }),
   ],
 };

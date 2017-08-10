@@ -9,6 +9,12 @@ import PieChart from './components/shared/PieChart';
 import PolarAreaChart from './components/shared/PolarAreaChart';
 import RadarChart from './components/shared/RadarChart';
 
+import 'jquery';
+import 'tether';
+import 'bootstrap';
+
+import './styles/app.scss';
+
 import {
   fetchBarData,
   fetchLineData,
@@ -70,7 +76,7 @@ class App extends Component<Props, State> {
     }: Partial<State> = this.state;
 
     return (
-      <div>
+      <div className="container">
         <Header />
         <h1>Bar Chart</h1>
         <BarChart
