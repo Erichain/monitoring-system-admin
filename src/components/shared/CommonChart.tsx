@@ -17,7 +17,7 @@ export default class CommonChart extends Component<Props, States> {
     data: {},
     type: 'bar',
     options: {},
-    width: 60,
+    width: 100,
   };
 
   componentWillReceiveProps(nextProps: Props) {
@@ -44,7 +44,7 @@ export default class CommonChart extends Component<Props, States> {
 
     return (
       <div className="chart-container" style={{
-        width: `${width}vw`,
+        width: `${width}%`,
       }}>
         <canvas id="chart-ctx" />
       </div>

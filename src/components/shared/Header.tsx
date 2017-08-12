@@ -13,7 +13,9 @@ export default class Banner extends Component<Props, object> {
 
   render() {
     return (
-      <div>This is Header!!!</div>
+      <div className="navbar navbar-light">
+        <div className="navbar-brand">Charts</div>
+      </div>
     );
   }
 }

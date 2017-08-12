@@ -9,10 +9,7 @@ import PieChart from './components/shared/PieChart';
 import PolarAreaChart from './components/shared/PolarAreaChart';
 import RadarChart from './components/shared/RadarChart';
 
-import 'jquery';
-import 'tether';
-import 'bootstrap';
-
+import 'bootstrap/dist/css/bootstrap.css';
 import './styles/app.scss';
 
 import {
