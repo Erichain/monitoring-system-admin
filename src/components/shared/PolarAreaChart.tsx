@@ -5,19 +5,25 @@ import CommonChart from './CommonChart';
 interface Props {
   data: object;
   options: object;
+  width?: number;
 }
 
 export default class BarChart extends Component<Props> {
   props: Props;
 
   render() {
-    const { data, options } = this.props;
+    const {
+      data,
+      options,
+      width,
+    } = this.props;
 
     return (
       <CommonChart
         type={'polarArea'}
         data={data}
         options={options}
+        width={width}
       />
     );
   }

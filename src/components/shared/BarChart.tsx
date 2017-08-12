@@ -15,12 +15,14 @@ export default class BarChart extends Component<Props> {
     const {
       data,
       options,
+      width,
     }: Props = this.props;
 
     return (
       <CommonChart
         data={data}
         options={options}
+        width={width}
       />
     );
   }

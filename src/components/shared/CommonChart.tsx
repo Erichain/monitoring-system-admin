@@ -6,11 +6,9 @@ import { findDOMNode } from 'react-dom';
 interface Props {
   data: object;
   options: object;
-  width?: number,
+  width?: number;
   type?: string;
 }
-
-interface States {}
 
 export default class CommonChart extends Component<Props, States> {
   props: Props;
