@@ -10,7 +10,7 @@ interface Props {
   type?: string;
 }
 
-export default class CommonChart extends Component<Props, States> {
+export default class CommonChart extends Component<Props> {
   props: Props;
 
   static defaultProps: Partial<Props> = {

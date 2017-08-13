@@ -1,10 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 
-interface Props {
-  name: string;
-  data: object;
-}
+interface Props {}
 
 export default class Banner extends Component<Props, object> {
   constructor(props: Props) {
