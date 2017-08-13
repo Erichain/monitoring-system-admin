@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 
-import Header from '../shared/Header';
+import Header from '../page-parts/Header';
 import BarChart from '../shared/BarChart';
 import LineChart from '../shared/LineChart';
 // import PieChart from '../shared/PieChart';

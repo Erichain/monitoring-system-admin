@@ -6,7 +6,9 @@ import {
 } from 'react-router-dom';
 import Dashboard from '../dashboard/Dashboard';
 
-export default class SideBar extends Component {
+interface Props {}
+
+export default class SideBar extends Component<Props> {
   render() {
     return (
       <div>

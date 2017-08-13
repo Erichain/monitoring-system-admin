@@ -1,11 +1,11 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import {
   HashRouter as Router,
 } from 'react-router-dom';
-import SideBar from './components/shared/SideBar';
+import SideBar from './components/page-parts/SideBar';
 
-ReactDOM.render(
+render(
   <Router basename="/">
     <SideBar />
   </Router>,
