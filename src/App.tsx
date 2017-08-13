@@ -10,6 +10,7 @@ import PolarAreaChart from './components/shared/PolarAreaChart';
 import RadarChart from './components/shared/RadarChart';
 
 import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.css';
 import './styles/app.scss';
 
 import {
