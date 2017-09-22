@@ -20,7 +20,8 @@
     "triple-equals": [true, "allow-null-check", "allow-undefined-check"],
     "prefer-const": true,
     "one-variable-per-declaration": [true, "ignore-for-loop"],
-    "no-boolean-literal-compare": true
+    "no-boolean-literal-compare": true,
+    "quotemark": [true, "single", "avoid-escape"]
   },
   "jsRules": {
     "max-line-length": [true, 100]

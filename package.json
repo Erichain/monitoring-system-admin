@@ -9,7 +9,12 @@
     "test": "jest --config=./jest.config.js",
     "start": "./scripts/dev.sh",
     "server": "nodemon ./mock-data/index.js",
-    "build": "./scripts/build.sh"
+    "build": "./scripts/build.sh",
+    "lint": "tslint -p tsconfig.json -c tslint.json src/**/*.ts && scss-lint src/**/*.scss"
+  },
+  "pre-commit": {
+    "silent": true,
+    "run": "lint"
   },
   "devDependencies": {
     "@types/jest": "^20.0.1",
