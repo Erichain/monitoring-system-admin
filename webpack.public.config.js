@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: path.join(__dirname, 'src', 'App.tsx'),
+    app: path.join(__dirname, 'src', 'app.ts'),
   },
 
   resolve: {
