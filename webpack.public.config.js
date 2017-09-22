@@ -16,9 +16,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(tsx?|js)$/,
+        test: /\.vue$/,
         exclude: /node_modules/,
-        use: ['ts-loader'],
+        use: ['vue-loader'],
       }, {
         test: /\.css$/,
         loader: 'style-loader!css-loader',
