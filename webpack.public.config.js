@@ -10,7 +10,7 @@ module.exports = {
       'src',
       'node_modules',
     ],
-    extensions: ['.ts', '.tsx', '.js', '.scss', '.css', '*'],
+    extensions: ['.ts', '.vue', '.js', '.scss', '.css', '*'],
   },
 
   module: {
