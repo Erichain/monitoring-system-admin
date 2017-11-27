@@ -1,8 +1,9 @@
 import Vue from 'vue';
-import Container from './Container';
+import Container from './Container.vue';
 
 new Vue({
-  el: '#app-container',
-  components: { Container },
-});
+  components: {
+    Container
+  }
+}).$mount('#app-container');
 
