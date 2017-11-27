@@ -6,7 +6,7 @@
 
 <script type="text/babel">
   export default {
-    name: 'app',
+    data() {},
   };
 </script>
 

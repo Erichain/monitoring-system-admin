@@ -40,6 +40,7 @@
     "open-browser-webpack-plugin": "^0.0.5",
     "path": "^0.12.7",
     "postcss-loader": "^2.0.6",
+    "pre-commit": "^1.2.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
     "ts-jest": "^20.0.6",
@@ -48,6 +49,7 @@
     "typescript": "^2.3.4",
     "url-loader": "^0.5.9",
     "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.5.8",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   },

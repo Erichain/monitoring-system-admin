@@ -11,6 +11,9 @@ module.exports = {
       'node_modules',
     ],
     extensions: ['.ts', '.vue', '.js', '.scss', '.css', '*'],
+    alias: {
+      vue: 'vue/dist/vue.js'
+    },
   },
 
   module: {
