@@ -6,7 +6,7 @@ An admin system for front-end performance monitoring.
 #### Install dependencies
 
 ``` bash
-yarn install
+npm install
 ```
 
 #### Start Project In Browser
