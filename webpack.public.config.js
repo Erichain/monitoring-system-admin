@@ -12,7 +12,7 @@ module.exports = {
     ],
     extensions: ['.ts', '.vue', '.js', '.scss', '.css', '*'],
     alias: {
-      vue: 'vue/dist/vue.js'
+      'vue$': 'vue/dist/vue.esm.js'
     },
   },
 
@@ -21,10 +21,23 @@ module.exports = {
       {
         test: /\.vue$/,
         exclude: /node_modules/,
-        use: ['vue-loader'],
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': 'vue-style-loader!css-loader!sass-loader',
+          },
+          hotReload: true,
+        },
+      }, {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+        },
       }, {
         test: /\.css$/,
-        loader: 'style-loader!css-loader',
+        use: ['style-loader', 'css-loader'],
       }, {
         test: /\.scss$/,
         exclude: /node_modules/,

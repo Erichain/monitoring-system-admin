@@ -1,6 +1,6 @@
 <template></template>
 
-<script type="text/babel">
+<script lang="ts">
   export default {
     name: 'Dashboard',
   };

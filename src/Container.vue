@@ -1,13 +1,21 @@
 <template>
   <h1>
-    dsfsdfsfs
+    This is Container
   </h1>
 </template>
 
-<script type="text/babel">
-  export default {
-    data() {},
-  };
+<script lang="ts">
+  import Vue from 'vue'
+
+  export default Vue.extend({
+    props: ['name', 'initialEnthusiasm'],
+
+    data() {
+      return {
+        enthusiasm: this.initialEnthusiasm,
+      }
+    },
+  });
 </script>
 
 <style></style>
